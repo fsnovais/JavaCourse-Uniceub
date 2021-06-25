@@ -1,0 +1,22 @@
+package source;
+
+/**
+ * Representa uma sala de aula com estudantes
+ * cada sala de aula tem uma lusta de estudantes
+ * e um array que representa os lugares na sala
+ * @author felip
+ *
+ */
+
+public class SalaDeAula {
+	
+	String nomePredio;
+	String nomeSala;
+	ArrayList<Estudante> estudantes;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

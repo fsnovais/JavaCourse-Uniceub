@@ -1,0 +1,14 @@
+
+public class Banco {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Banco banco = new Banco();
+		banco.rodar();
+
+	}
+	
+	public void rodar() {
+		System.out.println("Bem Vindo!")
+	}
+}

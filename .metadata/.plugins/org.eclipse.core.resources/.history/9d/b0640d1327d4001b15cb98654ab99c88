@@ -1,0 +1,61 @@
+package jogosimples;
+
+import java.util.Scanner;
+
+
+public class JogoSimples {
+
+	/**
+	 * Escreva um método que transforme os segundos dados para o formato hora:minutos:segundos.
+	 * @param segundos à converter
+	 * @return string para retornar depois de formatado: 23:59:59
+	 * 
+	 * Exemplo(s): 
+	 * - Se o input é 1432, printa e retorna o formato 0:23:52
+	 * - Se o input é 0, printa e retorna o formato 0:0:0
+	 * - Se o input não for válido (e.g. input < 0 ) retorna -1:-1:-1	
+	 */
+	public String converteTempo(int segundos){
+		int horas;
+		int minutos;
+		
+		horas = segundos/3600;
+		segundos = segundos%3600;
+		minutos = segundos/60;
+		segundos = segundos%60;
+		
+		return Integer.toString(horas)+":"+Integer.toString(minutos)+":"+Integer.toString(segundos);
+	}
+
+	/**
+	 * Escreva um método que soma todos os digitos digitados.
+	 * @param inteiro para somar digitos
+	 * @return inteiro com os numeros já somados.
+	 * 
+	 * Exemplo(s): 
+	 * - Se o input for 524, retorna 11.
+	 * - Se o input for 7, retorna 7.
+	 * - Se o input for 0, retorna 0.
+	 */
+	public int somaDigitos(int input){
+		// TODO: Seu código aqui
+		return 0;
+	}
+	
+	public static void main(String[] args) {
+		// Crie uma instância da classe JogoSimples
+		// TODO: Seu código aqui
+		
+		Scanner sc = new Scanner(System.in);
+		
+		// Pergunte ao usuário qual jogo deseja jogar.
+		// Então pergunta ao usuário o valor para passar ao método correspondente.
+		
+		// se o usuario digitar 1, entao faça o método converte tempo.
+		// se digitar 2, peça o método que soma os digitos.
+
+		// TODO: Seu código aqui
+		
+		sc.close();
+	}	
+}

@@ -1,0 +1,186 @@
+package hw6;
+
+import java.util.Scanner;
+
+
+public class PrimeraClasse {
+	
+	/**
+	*	Esse é o método main, o ponto de entrada para o seu código Java.
+	*	@param args
+	*/
+	public static void main(String[]args) {
+		
+		//imprimindo usando SOPL: System.out.prrintln()
+		System.out.println("Hello World");
+		System.out.println(); //Imprime uma linha em branco (/n)
+		
+		/*
+		 * Definindo variáveis
+		 */
+		
+		int x = 5;
+		
+		double y = 5.0;
+		
+		boolean umBool = true;
+		
+		System.out.println("x: "+ x);
+		System.out.println("y: "+ y);
+		System.out.println("umBool: "+ umBool);
+		
+		/*
+		 * Strings e caracteres
+		 */
+		
+		String versao = "ijloo";
+		char letra = 'a';
+		
+		String course = versao + 0121;// String com int
+		String g = letra + ""; // Char com string
+		
+		String informacaoCurso = course + ": "+ g;
+		System.out.println(informacaoCurso);
+		
+		/*
+		 * Operadores Matemáticos
+		 */
+		
+		double d = 2 * x + 10;
+		double z = 2 * y + 5;
+		
+		System.out.println();
+		System.out.println("d :"+ d);
+		System.out.println("z :"+ z);
+		
+		//divisão com inteiros
+		//usa divisão de inteiros e ignora o que sobra
+		System.out.println("x / 2: "+ (x / 2));
+		
+		//divisão com floats
+		System.out.println("x / 2.0" + (x / 2.0));
+		
+		//exponenciação
+		//Você tem que usar métodos para fazer cálculos com esponenciais
+		System.out.println("x pow 4: " + Math.pow(x,  4));
+		
+		/*
+		 * Operações com strings
+		 */
+		
+		//concatenação de strings
+		String nomeInteiro = "Brandon" + " " + "Lee" + " " + "Krakowsky";
+		
+		//Metodo de String para converter para maiúsculo
+		String nomeInteiroMaiusculo = nomeInteiro.toUpperCase();
+		
+		System.out.println(nomeInteiroMaiusculo);
+		
+		/*
+		 * Loops e condicionais
+		 */
+		
+		//Checagem de condicional se x é par, usando o operador % (resto de divisão)
+		System.out.println();
+		System.out.println("x: "+ x);
+		
+		if (x % 2 == 0) {
+			System.out.println(x + " e par");
+		}else {
+			System.out.println(x + " e impar");
+		}
+		
+		double e = 2.3;
+		double f = 2.4;
+		double g1 = 2.1;
+		
+		//operadores boolean
+		//&& (and) - verdadeiro se ambos os operadores são verdadeiros
+		System.out.println();
+		if (e > 2 && e < f) {
+			System.out.println(e + " esta enrte 2 e "+ f);
+		}
+		
+		//|| (or) verdadeiro se algum dos dois for verdadeiro
+		if (f > e || f > g1) {
+			System.out.println(g1 + "não é igual a 2.6");
+		}
+		
+		//loops while
+		int i = 0;
+		
+		System.out.println();
+		while( i < 5) {
+			System.out.println("i: "+ i);
+			
+			i++;
+		}
+		
+		//loops for
+		System.out.println();
+		
+		for (int k = 0; k < 10; k++) {
+			System.out.println("k: "+ k);
+		}
+		
+		/*
+		 * Casting (Transformação do tipo da variável)
+		 */
+		
+		//Cast int para String
+		String intParaString = Integer.toString(1);
+		
+		//Cast double para String
+		String doubleParaString = Double.toString(1.2);
+		
+		//Printa os valores e tipos dos  valores
+		System.out.println(); //linha vazia
+		System.out.println(intParaString + " " + intParaString.getClass());
+		System.out.println(doubleParaString + " " + doubleParaString.getClass());
+		
+		//Cast String para int
+		int stringParaInt = Integer.parseInt("1");
+		
+		//Cast String to double
+		double stringParaDouble = Double.parseDouble("1.2");
+		
+		//Imprime o valor e tipo dos valores
+		System.out.println(stringParaInt);
+		//Cast para objeto e depois chama o método getClass()
+		System.out.println(((Object)stringParaInt).getClass());
+		
+		System.out.println(stringParaDouble);
+		//Cast para objeto e depois chama o método getClass()
+		System.out.println(((Object)stringParaDouble).getClass());
+		
+		/*
+		 * Input do usuário
+		 */
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println();
+		System.out.println("Digite um número: ");
+		int inteiro = scan.nextInt(); //recebe o próximo input como um numero inteiro
+		System.out.println("Seu número é: "+ inteiro);
+		
+		//imprime a table de multiplicação até 10 de inteiro
+		for (int k = 1; i < 11; k++) {
+			//print k * inteiro
+			System.out.println(k + " x "+ inteiro + ": "+ (k * inteiro));
+		}
+		
+		System.out.println();
+		System.out.println("Digite uma string: ");
+		String myStr = scan.next(); //Recebe o próximo input como string
+		
+		//Imprime cada char em myStr separadamente
+		for (int u = 0; u < myStr.length(); u++) {
+			//imprime o char na posição u
+			System.out.println(myStr.charAt(u));
+		}
+		
+		scan.close();
+	}
+
+}

@@ -1,0 +1,36 @@
+package source;
+
+import java.util.ArrayList;
+
+/**
+ * Representa uma sala de aula com estudantes
+ * cada sala de aula tem uma lusta de estudantes
+ * e um array que representa os lugares na sala
+ * @author felip
+ *
+ */
+
+public class SalaDeAula {
+	
+	String nomePredio;
+	String nomeSala;
+	ArrayList<Estudante> estudantes;
+	Assento[][] assentos;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public SalaDeAula(String nomePredio, String nomeSala, int linhas, int colunas) {
+		this.nomePredio = nomePredio;
+		this.nomeSala = nomeSala;
+		this.assentos = new Assento[linhas][colunas];
+		
+		for (int i = 0; i<linhas; i++) {
+			for (int j = 0; j<colunas; j++)
+			assentos[i][j] = new Assento();
+		}
+	}
+
+}
